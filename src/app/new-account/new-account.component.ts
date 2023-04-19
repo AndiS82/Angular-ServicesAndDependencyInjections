@@ -6,7 +6,7 @@ import { AccountsService } from '../account.service';
   selector: 'app-new-account',
   templateUrl: './new-account.component.html',
   styleUrls: ['./new-account.component.css'],
-  providers: [LoggingService, AccountsService]
+  // providers: [LoggingService]
 })
 export class NewAccountComponent {
   // @Output() accountAdded = new EventEmitter<{name: string, status: string}>();
@@ -19,7 +19,7 @@ export class NewAccountComponent {
     //   name: accountName,
     //   status: accountStatus
     // });
-    this.loggingService.logStatusChange(accountStatus);
+    // this.loggingService.logStatusChange(accountStatus);
     this.accountsService.addAccount(accountName, accountStatus);
     // console.log('A server status changed, new status: ' + accountStatus);
   }
